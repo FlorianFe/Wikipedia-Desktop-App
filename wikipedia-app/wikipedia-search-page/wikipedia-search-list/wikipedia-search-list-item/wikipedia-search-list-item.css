@@ -1,0 +1,31 @@
+
+h2
+{
+  text-align: center;
+}
+
+a
+{
+  text-decoration: none;
+  color: var(--link-color, #03a9f4);
+}
+
+a:hover
+{
+  color: var(--link-hover-color, #0288d1);
+}
+
+paper-card
+{
+  height: 100%;
+}
+
+.not-favorited
+{
+  --iron-icon-fill-color: lightgrey;
+}
+
+.favorited
+{
+  --iron-icon-fill-color: orange;
+}

@@ -1,0 +1,37 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
+<link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="wikipedia-search-page/wikipedia-search-page.html">
+<link rel="import" href="wikipedia-article-page/wikipedia-article-page.html">
+
+<dom-module id="wikipedia-app">
+  <link rel="import" type="css" href="wikipedia-app.css">
+  <template>
+    <base href="http://[[language]].wikipedia.org" />
+
+    <header>
+      <paper-dropdown-menu label="Language">
+        <paper-listbox id="language-select" class="dropdown-content" selected="0">
+          <paper-item data-value="de">Deutsch</paper-item>
+          <paper-item data-value="en">English</paper-item>
+          <paper-item data-value="fr">Français</paper-item>
+          <flag-icon key="gb"></flag-icon>
+        </paper-listbox>
+      </paper-dropdown-menu>
+    </header>
+
+    <iron-pages selected="0">
+      <wikipedia-search-page language="[[language]]"></wikipedia-search-page>
+      <wikipedia-article-page language="[[language]]" article-name="Baum"></wikipedia-article-page>
+    </iron-pages>
+
+  </template>
+  <script src="wikipedia-app.js"></script>
+</dom-module>
