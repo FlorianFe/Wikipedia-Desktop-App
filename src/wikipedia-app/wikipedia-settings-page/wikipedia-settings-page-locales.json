@@ -1,0 +1,17 @@
+{
+  "de":
+  {
+    "number of search hits": "Anzahl der Suchergebnisse",
+    "language" : "Sprache"
+  },
+  "en":
+  {
+    "number of search hits": "number of search hits",
+    "language" : "language"
+  },
+  "fr":
+  {
+    "number of search hits": "???",
+    "language" : "???"
+  }
+}

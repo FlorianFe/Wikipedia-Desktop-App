@@ -1,0 +1,24 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../bower_components/app-localize-behavior/app-localize-behavior.html">
+
+<link rel="import" href="wikipedia-search-page/wikipedia-search-page.html">
+
+<dom-module id="wikipedia-app">
+  <link rel="import" type="css" href="wikipedia-app.css">
+  <template>
+    <paper-tabs id="tab-menu" selected="0">
+      <paper-tab>[[localize('search for entries')]]</paper-tab>
+      <paper-tab>[[localize('settings')]]</paper-tab>
+    </paper-tabs>
+
+    <iron-pages id="iron-pages" selected="1">
+      <wikipedia-search-page id="wikipedia-search-page" language="[[language]]"></wikipedia-search-page>
+      <wikipedia-settings-page id="wikipedia-settings-page"></wikipedia-settings-page>
+    </iron-pages>
+
+  </template>
+  <script src="wikipedia-app.js"></script>
+</dom-module>

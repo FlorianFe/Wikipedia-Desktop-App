@@ -1,0 +1,60 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <link rel="import" href="bower_components/test-fixture/test-fixture.html">
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.5.2/jasmine.min.css">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.5.2/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.5.2/jasmine-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.5.2/boot.min.js"></script>
+
+    <link rel="import" href="src/wikipedia-app/shared/wikipedia-json-request/wikipedia-json-request.html">
+    <link rel="import" href="src/wikipedia-app/wikipedia-search-page/wikipedia-search-request/wikipedia-search-request.html">
+  </head>
+  <body unresolved>
+
+    <!-- Test: <wikipedia-json-request> -->
+    <test-fixture id="wikipedia-json-request-fixture">
+      <template>
+        <wikipedia-json-request
+          id="wikipedia-json-request"
+          language="de"
+        ><wikipedia-json-request>
+      </template>
+    </test-fixture>
+    <script src="tests/wikipedia-json-request-test.js"></script>
+
+    <!-- Test: <wikipedia-search-request> -->
+    <test-fixture id="wikipedia-search-request-fixture">
+      <template>
+        <wikipedia-search-request
+          id="wikipedia-search-request"
+          search-hit-limit="10"
+          language="de"
+        ><wikipedia-search-request>
+      </template>
+    </test-fixture>
+    <script src="tests/wikipedia-search-request-test.js"></script>
+
+    <script>
+
+      beforeAll((done) =>
+      {
+        window.addEventListener("WebComponentsReady", () =>
+        {
+          done()
+        });
+      });
+
+    </script>
+
+  </body>
+</html>

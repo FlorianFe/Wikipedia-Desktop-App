@@ -1,0 +1,15 @@
+<link rel="import" href="../../../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../shared/wikipedia-json-request/wikipedia-json-request.html">
+
+<dom-module id="wikipedia-article-image-request">
+  <template>
+
+    <wikipedia-json-request
+      id="wikipedia-json-request"
+      language="[[language]]"
+      action="query"
+    ></wikipedia-json-request>
+
+  </template>
+  <script src="wikipedia-article-image-request.js"></script>
+</dom-module>

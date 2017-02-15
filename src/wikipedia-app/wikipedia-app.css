@@ -1,0 +1,17 @@
+
+:root
+{
+  --paper-tab-ink: #dddddd;
+  --paper-tabs-selection-bar-color: #2196f3;
+
+  --paper-tabs:
+  {
+      color: #2196f3;
+      font-size: 18px;
+  }
+}
+
+#iron-pages
+{
+  padding: 25px;
+}

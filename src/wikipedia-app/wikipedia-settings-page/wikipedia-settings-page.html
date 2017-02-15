@@ -1,0 +1,30 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/app-localize-behavior/app-localize-behavior.html">
+
+<link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../../bower_components/paper-slider/paper-slider.html">
+
+<dom-module id="wikipedia-settings-page">
+  <link rel="import" type="css" href="wikipedia-settings-page.css">
+  <template>
+    <paper-dropdown-menu label="[[localize('language')]]">
+      <paper-listbox id="language-select" class="dropdown-content" selected="0">
+        <paper-item data-value="de">Deutsch</paper-item>
+        <paper-item data-value="en">English</paper-item>
+        <paper-item data-value="fr">Français</paper-item>
+      </paper-listbox>
+    </paper-dropdown-menu>
+
+    <br><br>
+
+    <div class="label">
+      [[localize('number of search hits')]] :
+      <span class="number">[[searchHitLimit]]</span>
+    </div>
+    <paper-slider id="search-hit-limit-slider" pin value=100 min="10" max="200" step="10"></paper-slider>
+  </template>
+  <script src="wikipedia-settings-page.js"></script>
+</dom-module>

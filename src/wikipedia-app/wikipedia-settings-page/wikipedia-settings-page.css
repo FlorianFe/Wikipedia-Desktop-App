@@ -1,0 +1,15 @@
+paper-listbox
+{
+  cursor: pointer;
+}
+
+.label
+{
+  color: #999;
+  font-family: monospace;
+}
+
+.number
+{
+  color: #bbb;
+}

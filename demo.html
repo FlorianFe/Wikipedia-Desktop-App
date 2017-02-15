@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>bouncing-spinner demo</title>
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="bower_components/iron-demo-helpers/demo-snippet.html">
+
+    <link rel="import" href="src/wikipedia-app/wikipedia-app.html">
+    <link rel="import" href="src/wikipedia-app/wikipedia-settings-page/wikipedia-settings-page.html">
+    <link rel="import" href="src/wikipedia-app/wikipedia-search-page/wikipedia-search-page.html">
+    <link rel="import" href="src/wikipedia-app/wikipedia-search-page/wikipedia-search-list/wikipedia-search-list.html">
+    <link rel="import" href="src/wikipedia-app/wikipedia-search-page/wikipedia-search-list/wikipedia-search-list-item/wikipedia-search-list-item.html">
+  </head>
+  <body>
+    <div class="vertical-section-container">
+      <h3>Basic wikipedia-app demo</h3>
+      <demo-snippet>
+        <template>
+          <wikipedia-app></wikipedia-app>
+        </template>
+      </demo-snippet>
+
+
+      <h3>Basic wikipedia-settings-page demo</h3>
+      <demo-snippet>
+        <template>
+          <wikipedia-settings-page></wikipedia-settings-page>
+        </template>
+      </demo-snippet>
+
+
+      <h3>Basic wikipedia-search-page demo</h3>
+      <demo-snippet>
+        <template>
+          <wikipedia-search-page
+            language="de"
+            search-hit-limit="3"
+          ></wikipedia-search-page>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <wikipedia-search-page
+            language="en"
+            search-hit-limit="6"
+          ></wikipedia-search-page>
+        </template>
+      </demo-snippet>
+
+
+      <h3>Basic wikipedia-search-list demo</h3>
+      <demo-snippet>
+        <template>
+          <wikipedia-search-list
+            id="wikipedia-search-list-demo"
+            language="de"
+          ></wikipedia-search-list>
+
+          <script>
+
+            let searchHits = [];
+
+            searchHits.push(new WikipediaSearchHit("Baum", "Beschreibung eines Baums", "https://de.wikipedia.org/wiki/Baum"));
+            searchHits.push(new WikipediaSearchHit("Baum", "Beschreibung eines Baums", "https://de.wikipedia.org/wiki/Baum"));
+            searchHits.push(new WikipediaSearchHit("Baum", "Beschreibung eines Baums", "https://de.wikipedia.org/wiki/Baum"));
+
+            document.querySelector('#wikipedia-search-list-demo').searchHits = searchHits;
+
+          </script>
+        </template>
+      </demo-snippet>
+
+
+      <h3>Basic wikipedia-search-list-item demo</h3>
+      <demo-snippet>
+        <template>
+          <wikipedia-search-list-item
+            id="wikipedia-search-list-item-demo"
+            language="de"
+          ></wikipedia-search-list-item>
+
+          <script>
+
+            let searchHit = new WikipediaSearchHit("Baum", "Beschreibung eines Baums", "https://de.wikipedia.org/wiki/Baum");
+
+            document.currentScript.ownerDocument.querySelector('#wikipedia-search-list-item-demo').searchHit = searchHit;
+
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

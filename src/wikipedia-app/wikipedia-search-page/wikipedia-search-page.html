@@ -1,0 +1,35 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/app-localize-behavior/app-localize-behavior.html">
+
+<link rel="import" href="../../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../../bower_components/iron-icons/iron-icons.html">
+
+<link rel="import" href="wikipedia-search-request/wikipedia-search-request.html">
+<link rel="import" href="wikipedia-search-list/wikipedia-search-list.html">
+
+<dom-module id="wikipedia-search-page">
+  <link rel="import" type="css" href="wikipedia-search-page.css">
+  <template>
+
+    <paper-input
+      id="search-input"
+      label="[[localize('search')]]"
+      value="Hallo Welt"
+    >
+      <iron-icon icon="search" prefix></iron-icon>
+    </paper-input>
+
+    <wikipedia-search-request
+      id="wikipedia-search-request"
+      language="[[language]]"
+      search-hit-limit="[[searchHitLimit]]"
+    ></wikipedia-search-request>
+
+    <wikipedia-search-list
+      id="wikipedia-search-list"
+      language="[[language]]"
+    ></wikipedia-search-list>
+
+  </template>
+  <script src="wikipedia-search-page.js"></script>
+</dom-module>

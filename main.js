@@ -20,15 +20,23 @@ function createWindow () {
     icon:'icon.png'
   });
 
+
+  let args = process.argv.slice(2);
+  let filename = "index.html";
+
+  switch(args[0])
+  {
+    case 'demo' : filename = "demo.html"; break;
+    case 'test' : filename = "tests.html";
+  }
+
   // and load the index.html of the app.
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
+  mainWindow.loadURL(url.format(
+  {
+    pathname: path.join(__dirname, filename),
     protocol: 'file:',
     slashes: true
   }))
-
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
