@@ -2,7 +2,11 @@
 
 ## Description
 
-![Screenshot](https://raw.githubusercontent.com/florianfe/wikipedia-desktop-app/master/screenshots/screenshot-1.png)
+### Search for Wikipedia Entries
+![Screenshot 1](https://florianfe.github.io/screenshots/wikipedia-desktop-app/screenshot-1.png)
+
+### Available in english, german and french
+![Screenshot 2](https://florianfe.github.io/screenshots/wikipedia-desktop-app/screenshot-2.png)
 
 This App uses the unofficial wikipedia API for displaying search results.
 
